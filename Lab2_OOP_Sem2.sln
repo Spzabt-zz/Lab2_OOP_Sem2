@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex1", "Ex1\Ex1.csproj", "{CEB96B4D-B6BB-40E1-950A-2B90D7E150B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpWasher", "SharpWasher\SharpWasher.csproj", "{CEB96B4D-B6BB-40E1-950A-2B90D7E150B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
