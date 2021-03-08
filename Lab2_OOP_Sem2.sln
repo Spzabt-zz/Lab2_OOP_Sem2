@@ -26,5 +26,7 @@ Global
 		{F181A5AD-D98F-45C5-8BCD-8A5C43BB6248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F181A5AD-D98F-45C5-8BCD-8A5C43BB6248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F181A5AD-D98F-45C5-8BCD-8A5C43BB6248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEB96B4D-B6BB-40E1-950A-2B90D7E150B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB96B4D-B6BB-40E1-950A-2B90D7E150B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
