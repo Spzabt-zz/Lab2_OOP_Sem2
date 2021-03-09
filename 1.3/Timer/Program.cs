@@ -8,19 +8,9 @@ namespace Timer
     {
         private static void Main(string[] args)
         {
-            int timerCount = 0;
-            
             Timer timer = new Timer();
-            TimerCallback tC = new TimerCallback(timer.ShowTime);
-            System.Threading.Timer threadingTimer = new System.Threading.Timer(tC, null, 0, 2000);
-
-            /*while (timerCount <= 10)
-            {
-                Task.Delay(2000).Wait();
-                timerCount++;
-            }*/
-
-            //threadingTimer.Dispose();
+            TimerCallback tC = timer.ShowTime;
+            System.Threading.Timer TTimer = new System.Threading.Timer(tC, null, 0, 2000);
             
             Console.ReadLine();
         }
