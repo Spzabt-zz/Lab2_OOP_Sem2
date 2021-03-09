@@ -6,14 +6,12 @@ namespace Task4
     {
         private delegate double MyInfiniteSeries(double a, double r, int n);
 
-        //private const double EPS = 0.01;
-
         public static void Main(string[] args)
         {
             bool isNumber = true;
             int n = 0;
             double a = 1.0 /*double.Parse(Console.ReadLine())*/;
-            double r = 1.0/2.0 /*double.Parse(Console.ReadLine())*/;
+            double r = 1.0 / 2.0 /*double.Parse(Console.ReadLine())*/;
 
             Console.Write("Enter count of calculations: ");
             while (isNumber)
@@ -45,43 +43,54 @@ namespace Task4
             int changingSignsCount = -1;
             double tmp = sum + a;
 
-            for (int i = 1; i <= n; i++)
+            Console.WriteLine("1. Geometric series sum");
+            Console.WriteLine("2. Harmonic factorial series sum");
+            Console.WriteLine("3. Alternating geometric series sum");
+            switch (int.Parse(Console.ReadLine()))
             {
-                Console.Write($"1/{a} + ");
-                sum += a;
-                a *= r;
+                case 1:
+                    for (int i = 1; i <= n; i++)
+                    {
+                        Console.Write($"1/{a} + ");
+                        sum += a;
+                        a *= r;
+                    }
+                    break;
+                case 2:
+                    for (double i = 1; i <= n; i++)
+                    {
+                        Console.Write($"1/{i}! + ");
+                        sum += 1.0 / Factorial(i);
+                    }
+                    break;
+                case 3:
+                    for (int i = 1; i <= n; i++)
+                    {
+                        changingSignsCount++;
+
+                        if (isSumOrSub)
+                        {
+                            sum += tmp;
+                            Console.Write($" + 1/{a}");
+                        }
+                        else
+                        {
+                            sum -= tmp;
+                            Console.Write($" - 1/{a}");
+                        }
+                        if (changingSignsCount == 1)
+                        {
+                            isSumOrSub = !isSumOrSub;
+                            changingSignsCount = 0;
+                        }
+
+                        tmp = a *= r;
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Error NaN");
+                    break;
             }
-
-            /*for (double i = 1; i <= n; i++)
-            {
-                Console.Write($"1/{i}! + ");
-                sum += 1.0 / Factorial(i);
-            }*/
-
-            /*for (int i = 1; i <= n; i++)
-            {
-                changingSignsCount++;
-                if (isSumOrSub)
-                {
-                    sum += tmp;
-                    //sum += a;
-                    //a *= r;
-                }
-                else
-                {
-                    sum -= tmp;
-                    //sum -= a;
-                    //a *= r;
-                }
-
-                if (changingSignsCount == 1)
-                {
-                    isSumOrSub = !isSumOrSub;
-                    changingSignsCount = 0;
-                }
-
-                tmp = a *= r;
-            }*/
 
             return Math.Round(sum, 2);
         }
