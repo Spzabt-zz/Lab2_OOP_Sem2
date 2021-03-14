@@ -4,10 +4,10 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{282AAEC5-231F-4DF1-91DB-6C13F5F0710B}</ProjectGuid>
+        <ProjectGuid>{6E27C0DC-883F-4C42-8349-86D202E10DEB}</ProjectGuid>
         <OutputType>WinExe</OutputType>
-        <RootNamespace>Timer</RootNamespace>
-        <AssemblyName>Timer</AssemblyName>
+        <RootNamespace>Task2</RootNamespace>
+        <AssemblyName>Task2</AssemblyName>
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,7 +54,6 @@
         </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Timer.cs" />
         <EmbeddedResource Include="Form1.resx">
           <DependentUpon>Form1.cs</DependentUpon>
         </EmbeddedResource>
